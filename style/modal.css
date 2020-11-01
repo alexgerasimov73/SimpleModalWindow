@@ -1,0 +1,74 @@
+.modal-block.open .modal-overlay,
+.modal-block.open .modal-window {
+  opacity: 1;
+  z-index: 10;
+}
+
+.modal-block.hide .modal-overlay,
+.modal-block.hide .modal-window {
+  opacity: 1;
+  z-index: 10;
+}
+
+.modal-block.open .modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-block.open .modal-window {
+  transform: translateY(100px);
+}
+
+.modal-block.hide .modal-overlay {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.modal-block.hide .modal-window {
+  transform: translateY(-200px);
+}
+
+.modal-window,
+.modal-overlay {
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.35s ease-in;
+}
+
+.modal-window {
+  width: 600px;
+  border-radius: 8px;
+  background: #fff;
+  margin: 0px auto;
+  transform: translateY(-200px);
+  transition: transform 0.35s ease-in;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+}
+
+.modal-close {
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 10px;
+}
+
+.modal-footer {
+  padding: 10px;
+}
